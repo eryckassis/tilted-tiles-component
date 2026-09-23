@@ -1,0 +1,68 @@
+{
+  "name": "@eryckeyshow/tilted-tiles",
+  "version": "0.1.1",
+  "description": "Animated 3D tilted image tiles for React.",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "react",
+    "motion",
+    "animation",
+    "gallery",
+    "tiles",
+    "3d"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "typecheck": "tsc -b",
+    "build": "vite build --config vite.lib.config.ts && tsc -p tsconfig.lib.json",
+    "build:demo": "tsc -b && vite build --outDir dist-demo",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "prepublishOnly": "pnpm lint && pnpm typecheck && pnpm build",
+    "publish:check": "pnpm publish --dry-run",
+    "release": "pnpm publish --access public"
+  },
+  "peerDependencies": {
+    "motion": "^13.0.0",
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "motion": "^13.4.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "oxlint": "^1.85.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.0"
+  }
+}
