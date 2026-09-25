@@ -1,4 +1,4 @@
-# @baguc/tilted-tiles
+# /tilted-tiles
 
 Animated 3D image tiles for React, powered by Motion and CSS transforms.
 
